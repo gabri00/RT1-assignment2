@@ -41,5 +41,5 @@ To get the number of goals reached and canceled, open another command window and
 The frequency with which the information is printed in the info_node.py window can be set in the launch file [*assignment1.launch*](launch/assignment1.launch) inside of the `launch` directory. To do so, modify the value in the following line:
 
 ```xml
-<param name="frequency" type="double" value="1.0" />
+<param name="publish_frequency" type="double" value="1.0" />
 ```
