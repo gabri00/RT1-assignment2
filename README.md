@@ -22,7 +22,7 @@ Then you need to install the module. Go inside the root directory of your ROS wo
 
 Finally, launch the program, type the following command:
 ```sh
-> roslaunch assignment_2_2022 assignment1.launch
+> roslaunch RT_assignment_2 assignment1.launch
 ```
 
 ## Usage
