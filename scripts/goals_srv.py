@@ -4,7 +4,7 @@ import rospy
 import actionlib
 import actionlib.msg
 import RT_assignment_2.msg
-from RT_assignment_2.srv import Goals_rc, Goals_rcResponse
+from RT_assignment_2.srv import Goals, GoalsResponse
 
 # Times the robot reached or cancelled the goal position
 reached = 0
@@ -25,13 +25,13 @@ def callback(data):
 def get_goals(req):
    global reached, cancelled
    # Return the response
-   return Goals_rcResponse(reached, cancelled)
+   return GoalsResponse(reached, cancelled)
 
 def main():
    # Initialize the node
    rospy.init_node('goals_srv')
    # Create the service
-   srv = rospy.Service('goals_srv', Goals_rc, get_goals)
+   srv = rospy.Service('goals_srv', Goals, get_goals)
    # Subscribe to the action server
    action = rospy.Subscriber('/reaching_goal/result', RT_assignment_2.msg.PlanningActionResult, callback)
    rospy.spin()
