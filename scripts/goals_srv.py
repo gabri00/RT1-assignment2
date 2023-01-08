@@ -15,10 +15,10 @@ def callback(data):
    # Get status of the goal
    status = data.status.status
    # If the goal is reached
-   if status == 3:
+   if status == 2:
       reached += 1
    # If the goal is cancelled
-   elif status == 4:
+   elif status == 3:
       cancelled += 1
 
 # Service callback
