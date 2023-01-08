@@ -64,6 +64,8 @@ def main():
    pub = rospy.Publisher('/pos', Pos, queue_size=1)
    # Subscriber to the odometry of the robot to get the position and velocity
    odom = rospy.Subscriber('/odom', Odometry, callback)
+   # Call the action client
+   action_client()
 
 if __name__ == '__main__':
    main()
