@@ -6,12 +6,12 @@ import time
 
 from RT_assignment_2.msg import Pos
 
-frequency = 1.0
-old_time = 0
+frequency = 1.0 # Frequency of the node in Hz
+old_time = 0    # Time of the last print
 
 def callback(data):
    global frequency, old_time
-   # Get the current in milliseconds
+   # Get the current time in milliseconds
    current_time = time.time() * 1000
    
    # If the time difference is greater than the period print the info
@@ -20,7 +20,7 @@ def callback(data):
       des_x = rospy.get_param('des_x')
       des_y = rospy.get_param('des_y')
 
-      # Calculate the distance
+      # Calculate the (Euclidean) distance from the desired position
       distance = math.sqrt((des_x - data.x)**2 + (des_y - data.y)**2)
 
       # Calculate the average velocity
@@ -30,11 +30,12 @@ def callback(data):
       rospy.loginfo('Distance from desired position: %f', distance)
       rospy.loginfo('Average velocity: %f', velocity)
 
-      # Update the old time
+      # Update old time
       old_time = current_time
 
 def main():
    global frequency
+   # Initialize the node
    rospy.init_node('info_node')
    # Get publish frequency
    frequency = rospy.get_param('publish_frequency')

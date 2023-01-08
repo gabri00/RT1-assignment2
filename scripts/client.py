@@ -34,12 +34,10 @@ def action_client():
    # Wait for the action server to start
    client.wait_for_server()
 
-   print("Insert the goal coordinates (x,y) or 'c' to cancel the goal and press enter")
+   # Print instructions
+   print("Insert the goal coordinates (x,y) or type 'c' to cancel the goal, then press ENTER:")
 
    while not rospy.is_shutdown():
-      # Print instructions
-
-      # Read the input from the terminal
       input, o, e = select.select( [sys.stdin], [], [], 1)
       if (input):
          # Read the input

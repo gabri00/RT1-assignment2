@@ -6,7 +6,7 @@ import actionlib.msg
 import RT_assignment_2.msg
 from RT_assignment_2.srv import Goals, GoalsResponse
 
-# Times the robot reached or cancelled the goal position
+# Counter for reached and cancelled goal positions
 reached = 0
 cancelled = 0
 
@@ -34,6 +34,7 @@ def main():
    srv = rospy.Service('goals_srv', Goals, get_goals)
    # Subscribe to the action server
    action = rospy.Subscriber('/reaching_goal/result', RT_assignment_2.msg.PlanningActionResult, callback)
+   # Spin
    rospy.spin()
 
 if __name__ == '__main__':
