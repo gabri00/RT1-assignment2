@@ -2,8 +2,8 @@
 <launch>
     <include file="$(find RT_assignment_2)/launch/sim_w1.launch" />
 
-    <param name="des_pos_x" value= "0.0" />
-    <param name="des_pos_y" value= "1.0" />
+    <param name="des_x" value= "0.0" />
+    <param name="des_y" value= "1.0" />
     <param name="publish_frequency" type="double" value="1.0" />
 
     <node pkg="RT_assignment_2" type="wall_follow_service.py" name="wall_follower" />
