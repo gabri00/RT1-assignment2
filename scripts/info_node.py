@@ -6,10 +6,30 @@ import time
 
 from RT_assignment_2.msg import Pos
 
+"""
+..module: RT_assignment_2
+   :platform: Unix
+   :synopsis: This module contains the node that prints the distance from the desired position and the average velocity of the robot.
+
+..moduleauthor: Gabriele Nicchiarelli
+
+ROS node that prints the distance from the desired position and the average velocity of the robot.
+
+Subscribes to:
+   /pos
+"""
+
 frequency = 1.0 # Frequency of the node in Hz
+"""float: Frequency of the node in Hz.
+"""
 old_time = 0    # Time of the last print
 
 def callback(data):
+   """Callback function for the subscriber to the odometry of the robot.
+   
+   Args:
+      data (Pos message): Position and velocity of the robot.
+   """
    global frequency, old_time
    # Get the current time in milliseconds
    current_time = time.time() * 1000

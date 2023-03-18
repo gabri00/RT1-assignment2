@@ -13,7 +13,31 @@ from geometry_msgs.msg import Point, Pose, Twist
 import RT_assignment_2.msg
 from RT_assignment_2.msg import Pos
 
+"""
+..module: RT_assignment_2
+   :platform: Unix
+   :synopsis: This module contains the action client for the action server.
+
+..moduleauthor: Gabriele Nicchiarelli
+
+ROS node that sends goals to the action server.
+
+Subscribes to:
+   /odom
+
+Publishes to:
+   /pos
+"""
+
 def callback(data):
+   """Callback function for the subscriber to the odometry of the robot.
+
+   Args:
+      data (Odometry message): Odometry message of the robot.
+   
+   Returns:
+      None
+   """
    # Get position and linear velocity from odometry
    position = data.pose.pose.position
    linear_velocity = data.twist.twist.linear
@@ -29,6 +53,15 @@ def callback(data):
 
 # Function for the action client
 def action_client():
+   """Action client for the action server.
+
+   Args:
+      None
+   
+   Returns:
+      None
+   """
+
    # Create an action client
    client = actionlib.SimpleActionClient('/reaching_goal', RT_assignment_2.msg.PlanningAction)
    # Wait for the action server to start
