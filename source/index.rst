@@ -1,5 +1,5 @@
 .. RT assignment 2 documentation master file, created by
-   sphinx-quickstart on Fri Mar 17 12:28:27 2023.
+   sphinx-quickstart on Sun Mar 26 12:36:43 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -19,18 +19,25 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+RT_assignment_2 documentation!
+==============================
 
-Client Module
-=============
-.. automodule:: scripts.client
+This is the documentation for the RT assignment 2.
+
+Information node
+================
+
+.. automodule:: scripts.info_node
    :members:
 
-Goals service Module
-====================
+Goal service
+============
+
 .. automodule:: scripts.goals_srv
    :members:
 
-Info Module
+Client node
 ===========
-.. automodule:: scripts.info_node
+
+.. automodule:: scripts.client
    :members:

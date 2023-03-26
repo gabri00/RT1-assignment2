@@ -1,23 +1,21 @@
-#! /usr/bin/env python
-
-import rospy
-import math
-import time
-
-from RT_assignment_2.msg import Pos
-
 """
-..module: RT_assignment_2
+.. module: info_node
    :platform: Unix
    :synopsis: This module contains the node that prints the distance from the desired position and the average velocity of the robot.
 
-..moduleauthor: Gabriele Nicchiarelli
+.. moduleauthor: Gabriele Nicchiarelli
 
 ROS node that prints the distance from the desired position and the average velocity of the robot.
 
 Subscribes to:
    /pos
 """
+
+import rospy
+import math
+import time
+
+from RT_assignment_2.msg import Pos
 
 frequency = 1.0 # Frequency of the node in Hz
 """float: Frequency of the node in Hz.

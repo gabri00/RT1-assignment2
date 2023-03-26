@@ -1,4 +1,18 @@
-#! /usr/bin/env python
+"""
+.. module: client
+   :platform: Unix
+   :synopsis: This module contains the action client for the action server.
+
+.. moduleauthor: Gabriele Nicchiarelli
+
+ROS node that sends goals to the action server.
+
+Subscribes to:
+   /odom
+
+Publishes to:
+   /pos
+"""
 
 import rospy
 import math
@@ -12,22 +26,6 @@ from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Point, Pose, Twist
 import RT_assignment_2.msg
 from RT_assignment_2.msg import Pos
-
-"""
-..module: RT_assignment_2
-   :platform: Unix
-   :synopsis: This module contains the action client for the action server.
-
-..moduleauthor: Gabriele Nicchiarelli
-
-ROS node that sends goals to the action server.
-
-Subscribes to:
-   /odom
-
-Publishes to:
-   /pos
-"""
 
 def callback(data):
    """Callback function for the subscriber to the odometry of the robot.

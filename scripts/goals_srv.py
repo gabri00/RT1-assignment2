@@ -1,23 +1,21 @@
-#! /usr/bin/env python
-
-import rospy
-import actionlib
-import actionlib.msg
-import RT_assignment_2.msg
-from RT_assignment_2.srv import Goals, GoalsResponse
-
 """
-..module: RT_assignment_2
+.. module: goals_srv
    :platform: Unix
    :synopsis: This module contains the service server for the service client.
 
-..moduleauthor: Gabriele Nicchiarelli
+.. moduleauthor: Gabriele Nicchiarelli
 
 ROS node that provides the number of reached and cancelled goals.
 
 Subscribes to:
    /reaching_goal/result
 """
+
+import rospy
+import actionlib
+import actionlib.msg
+import RT_assignment_2.msg
+from RT_assignment_2.srv import Goals, GoalsResponse
 
 # Counter for reached and cancelled goal positions
 reached = 0
