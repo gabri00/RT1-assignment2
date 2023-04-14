@@ -19,25 +19,25 @@ It is also required to create a _launch file_ to start the simulation ([_assignm
 Before running the program it is required to install the **xterm** library, if it is not already installed on the system:
 
 ```sh
-> sudo apt install xterm
+sudo apt install xterm
 ```
 
 Now we need to run the ROS master in a separete terminal:
 
 ```sh
-> roscore
+roscore
 ```
 
 We can then install the module. Go inside the root directory of your ROS workspace and run the command:
 
 ```sh
-> catkin_make
+catkin_make
 ```
 
 Finally, launch the simulation with the _roslaunch_ command:
 
 ```sh
-> roslaunch RT_assignment_2 assignment1.launch
+roslaunch RT_assignment_2 assignment1.launch
 ```
 
 ## Usage
@@ -52,7 +52,7 @@ The program will open four windows:
 If you want to know the number of goals that have been reached/canceled, in another command window type:
 
 ```sh
-> rosservice call /goals
+rosservice call /goals
 ```
 
 If you want to change the the frequency with which the information are printed in the _info_node_ window, you have to open the launch file [_assignment1.launch_](launch/assignment1.launch) inside of the `launch` directory, and change the _value_ attribute:
