@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 """
 .. module: goals_srv
    :platform: Unix

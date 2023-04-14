@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 """
 .. module: info_node
    :platform: Unix
