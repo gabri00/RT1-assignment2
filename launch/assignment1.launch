@@ -11,6 +11,6 @@
     <node pkg="RT_assignment_2" type="bug_as.py" name="bug_action_service" output="screen" />
 
     <node pkg="RT_assignment_2" type="goals_srv.py" name="goals_srv" />
-    <node pkg="RT_assignment_2" type="client.py" name="client" output="screen" launch-prefix="xterm -hold -e" />
+    <!-- <node pkg="RT_assignment_2" type="client.py" name="client" output="screen" launch-prefix="xterm -hold -e" /> -->
     <node pkg="RT_assignment_2" type="info_node.py" name="info" output="screen" launch-prefix="xterm -hold -e" />
 </launch>
