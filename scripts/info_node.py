@@ -17,8 +17,8 @@ def callback(data):
    # If the time difference is greater than the period print the info
    if current_time - old_time > 1000 / frequency:
       # Get desired position
-      des_x = rospy.get_param('des_x')
-      des_y = rospy.get_param('des_y')
+      des_x = rospy.get_param('des_pos_x')
+      des_y = rospy.get_param('des_pos_y')
 
       # Calculate the (Euclidean) distance from the desired position
       distance = math.sqrt((des_x - data.x)**2 + (des_y - data.y)**2)
