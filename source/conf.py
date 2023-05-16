@@ -26,7 +26,11 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
-    'sphinx.ext.mathjax'
+    'sphinx.ext.mathjax',
+    'sphinx.ext.doctest',
+    'sphinx.ext.coverage',
+    'sphinx.ext.ifconfig',
+    'sphinx.ext.inheritance_diagram'
 ]
 
 templates_path = ['_templates']
@@ -46,6 +50,6 @@ intersphinx_mapping = { 'python': ('https://docs.python.org/3', None) }
 
 # -- Breathe configuration ---------------------------------------------------
 
-# breathe_projects = { "RT assignment 2": "../build/xml/" }
-# breathe_default_project = "RT assignment 2"
+# breathe_projects = { "RT_assignment_2": "../build/xml/" }
+# breathe_default_project = "RT_assignment_2"
 # breathe_default_members = ('members', 'undoc-members')
