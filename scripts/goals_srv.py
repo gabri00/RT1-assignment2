@@ -1,9 +1,7 @@
-#! /usr/bin/env python
-
 """
 .. module: goals_srv
    :platform: Unix
-   :synopsis: This module contains the service server for the service client.
+   :synopsis: This file contains the service server for the action server.
 
 .. moduleauthor: Gabriele Nicchiarelli
 
@@ -12,6 +10,8 @@ ROS node that provides the number of reached and cancelled goals.
 Subscribes to:
    /reaching_goal/result
 """
+
+#!/usr/bin/env python
 
 import rospy
 import actionlib

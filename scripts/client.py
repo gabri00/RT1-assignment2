@@ -1,5 +1,3 @@
-#! /usr/bin/env python
-
 """
 .. module: client
    :platform: Unix
@@ -7,7 +5,7 @@
 
 .. moduleauthor: Gabriele Nicchiarelli
 
-ROS node that sends goals to the action server.
+ROS node that sends the goal position to the action server.
 
 Subscribes to:
    /odom
@@ -15,6 +13,8 @@ Subscribes to:
 Publishes to:
    /pos
 """
+
+#!/usr/bin/env python
 
 import rospy
 import math

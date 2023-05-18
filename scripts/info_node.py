@@ -1,17 +1,17 @@
-#! /usr/bin/env python
-
 """
 .. module: info_node
    :platform: Unix
-   :synopsis: This module contains the node that prints the distance from the desired position and the average velocity of the robot.
+   :synopsis: This node prints the distance from the desired position and the average velocity of the robot.
 
 .. moduleauthor: Gabriele Nicchiarelli
 
-ROS node that prints the distance from the desired position and the average velocity of the robot.
+ROS node that prints to an information console the distance from the desired position and the average velocity of the robot.
 
 Subscribes to:
    /pos
 """
+
+#!/usr/bin/env python
 
 import rospy
 import math
