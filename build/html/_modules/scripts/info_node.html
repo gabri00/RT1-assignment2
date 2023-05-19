@@ -8,6 +8,7 @@
     <title>scripts.info_node &#8212; RT assignment 2 0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,15 +44,17 @@
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">.. module: info_node</span>
 <span class="sd">   :platform: Unix</span>
-<span class="sd">   :synopsis: This module contains the node that prints the distance from the desired position and the average velocity of the robot.</span>
+<span class="sd">   :synopsis: This node prints the distance from the desired position and the average velocity of the robot.</span>
 
 <span class="sd">.. moduleauthor: Gabriele Nicchiarelli</span>
 
-<span class="sd">ROS node that prints the distance from the desired position and the average velocity of the robot.</span>
+<span class="sd">ROS node that prints to an information console the distance from the desired position and the average velocity of the robot.</span>
 
 <span class="sd">Subscribes to:</span>
 <span class="sd">   /pos</span>
 <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1">#!/usr/bin/env python</span>
 
 <span class="kn">import</span> <span class="nn">rospy</span>
 <span class="kn">import</span> <span class="nn">math</span>
@@ -77,8 +80,8 @@
    <span class="c1"># If the time difference is greater than the period print the info</span>
    <span class="k">if</span> <span class="n">current_time</span> <span class="o">-</span> <span class="n">old_time</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="o">/</span> <span class="n">frequency</span><span class="p">:</span>
       <span class="c1"># Get desired position</span>
-      <span class="n">des_x</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;des_x&#39;</span><span class="p">)</span>
-      <span class="n">des_y</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;des_y&#39;</span><span class="p">)</span>
+      <span class="n">des_x</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;des_pos_x&#39;</span><span class="p">)</span>
+      <span class="n">des_y</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;des_pos_y&#39;</span><span class="p">)</span>
 
       <span class="c1"># Calculate the (Euclidean) distance from the desired position</span>
       <span class="n">distance</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">des_x</span> <span class="o">-</span> <span class="n">data</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">des_y</span> <span class="o">-</span> <span class="n">data</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
