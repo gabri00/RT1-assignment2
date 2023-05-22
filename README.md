@@ -14,6 +14,8 @@ The task of this assignment was to implement three new nodes in the robot simula
 
 It is also required to create a _launch file_ to start the simulation ([_assignment1.launch_](launch/assignment1.launch)).
 
+For more information visit the [documentation page](https://gabri00.github.io/RT_assignment_2/).
+
 ## Run the simulation
 
 Before running the program it is required to install the **xterm** library, if it is not already installed on the system:
