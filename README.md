@@ -61,6 +61,10 @@ If you want to change the the frequency with which the information are printed i
 <param name="publish_frequency" type="double" value="1.0" />
 ```
 
+### Jupyter notebook variat
+
+The client node ([client.py](scripts/client.py)) can be substituted by the Jupyter version of the same node [client.ipynb](client.ipynb).
+
 ## Code description
 
 The _client_ node has the following structure:
