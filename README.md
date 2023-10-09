@@ -14,7 +14,7 @@ The task of this assignment was to implement three new nodes in the robot simula
 
 It is also required to create a _launch file_ to start the simulation ([_assignment1.launch_](launch/assignment1.launch)).
 
-For more information visit the [documentation page](https://gabri00.github.io/RT_assignment_2/).
+For more information visit the [documentation page](https://gabri00.github.io/RT1_assignment2/).
 
 ## Run the simulation
 
